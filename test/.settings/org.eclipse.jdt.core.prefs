@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class Main {
+
+	int count = 0;
+	static int[] precious;
+
+	public static void main(String stringargs[]) {
+
+		Scanner s = new Scanner(System.in);
+		Main mm = new Main();
+		int n = s.nextInt();
+		int m = s.nextInt();
+		int k = s.nextInt();
+
+		int[][] matrix = new int[n][m];
+
+		precious = new int[n * m];
+		int r = 0;
+		// int count = 0;
+
+		for (int i = 0; i < n; i++) {
+			for (int j = 0; j < m; j++) {
+				matrix[i][j] = s.nextInt();
+			}
+		}
+		mm.goRight(0, 0, n, m, matrix);
+		mm.goDown(0, 0, n, m, matrix);
+	}
+
+	private void goRight(i
